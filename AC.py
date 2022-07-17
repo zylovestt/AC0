@@ -201,7 +201,6 @@ class ActorCritic_Double:
         #self.agent_optimizer=torch.optim.Adam(self.agent.parameters(),lr=lr,eps=1e-3)
         #self.agent_optimizer=torch.optim.SGD(self.agent.parameters(),lr=lr,momentum=0.9)
         self.agent_optimizer=torch.optim.NAdam(self.agent.parameters(),lr=lr,eps=1e-8)
-        self.input_shape=input_shape
         self.num_processors=input_shape[0]
         self.num_subtasks=num_subtasks
         self.gamma=gamma
